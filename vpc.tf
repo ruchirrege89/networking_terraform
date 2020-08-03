@@ -5,8 +5,8 @@ resource "aws_vpc" "my_terraform_vpc" {
   instance_tenancy = "default"
 
   tags = {
-    Name        = "RuchirVPC"
+    Name        = "TerraformPC"
     Environment = "${terraform.workspace}"
-    Location    = "Austin"
+    Location    = "USA"
   }
 }

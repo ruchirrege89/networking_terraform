@@ -1,5 +1,5 @@
 locals {
-  vpc_name = "${terraform.workspace == dev ? ruchirvpc-dev : ruchirvpc-prod}"
+  vpc_name = "${terraform.workspace == dev ? terraformvpc-dev : terraformvpc-prod}"
 }
 
 resource "aws_vpc" "my_terraform_vpc" {
@@ -9,8 +9,8 @@ resource "aws_vpc" "my_terraform_vpc" {
   instance_tenancy = "default"
 
   tags = {
-    Name        = "RuchirVPC"
+    Name        = "TerraformVPC"
     Environment = "${terraform.workspace}"
-    Location    = "Austin"
+    Location    = "USA"
   }
 }

@@ -17,7 +17,7 @@ resource "aws_internet_gateway" "igw" {
   vpc_id = "${aws_vpc.my_terraform_vpc.id}" ### get vpc id
 
   tags = {
-    Name = "RuchirIGW"
+    Name = "TerraformIGW"
   }
 }
 
@@ -29,7 +29,7 @@ resource "aws_route_table" "prt" {
     gateway_id = "${aws_internet_gateway.igw.id}"
 
     tags = {
-      Name = "RuchirPRT"
+      Name = "TerraformPRT"
     }
   }
 }

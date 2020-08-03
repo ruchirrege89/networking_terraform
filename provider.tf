@@ -6,7 +6,7 @@ provider "aws" {
 ## Remotely saving terraform statefile in S3
 terraform {
   backend "s3" {
-    bucket         = "ruchir-bucket"
+    bucket         = "XXXXX-bucket" ## Replace with the actual bucket name
     key            = "terraform/terraform.tfstate"
     region         = "us-east-1"
     dynamodb_table = "terraformlock"

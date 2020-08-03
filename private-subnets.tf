@@ -17,7 +17,7 @@ resource "aws_instance" "nat" {
   associate_public_ip_address = true
   vpc_security_group_ids      = ["${aws_security_group.nat_sg.id}"]
   tags = {
-    Name = "RuchirNAT"
+    Name = "TerraformNAT"
   }
 }
 
@@ -30,7 +30,7 @@ resource "aws_route_table" "privatert" {
   }
 
   tags = {
-    Name = "RuchirPrivateRT"
+    Name = "TerraformPrivateRT"
   }
 }
 
